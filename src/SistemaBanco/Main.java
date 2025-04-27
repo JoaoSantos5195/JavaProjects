@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
     public static int criaId(int numAnterior, int id) {
         id = numAnterior += 1;
         numAnterior = id;
@@ -15,7 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int escolha;
 
-        int num = criaId(numAnterior, 2);
+        int num = criaId(numAnterior, 0);
         ArrayList<Usuario> usuarios = new ArrayList<>();
         usuarios.add(new Usuario(num, "João", "joao1234", 12344321, 0, 0, 0, 0));
 
@@ -39,7 +40,6 @@ public class Main {
 
                 default:
                     System.err.println("Digite uma opção valida");
-
             }
         } while (escolha != 3);
         scanner.close();
